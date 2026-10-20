@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher or Lower Game</title>
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+        <h1>Higher or Lower Game</h1>
+        
+        <!-- Game Stats -->
+        <div class="stats-panel">
+            <p>Lives: <span id="lives-display">3</span></p>
+            <p>Streak: <span id="streak-display">0</span></p>
+            <p>Best Streak: <span id="best-streak-display">0</span></p>
+        </div>
+
+        <!-- Game Card / Display Area -->
+        <div class="card-display">
+            <p>Current Item Value:</p>
+            <h2 id="current-value-display">--</h2>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="button-group">
+            <button id="higher-btn">Higher ⬆️</button>
+            <button id="lower-btn">Lower ⬇️</button>
+        </div>
+
+        <!-- Message Log -->
+        <p id="message-display">Make your guess!</p>
+
+        <!-- Restart Button (Hidden until game over) -->
+        <button id="restart-btn" class="hidden">Play Again</button>
+    </main>
+
+    <!-- External JavaScript file with defer -->
+    <script src="script.js" defer></script>
+</body>
+</html>
+<hr style="margin: 40px 0;">
+
+    <main class="configurator-container">
+        <h1>Combo Meal Configurator</h1>
+        
+        <!-- Budget & Total Display -->
+        <div class="budget-panel">
+            <p>Budget: $<span id="budget-limit">20</span></p>
+            <p>Current Total: $<span id="total-price">0</span></p>
+        </div>
+
+        <!-- Empty container where items will be dynamically rendered via JS -->
+        <div id="options-container" class="options-grid"></div>
+
+        <!-- Error / Rule Message Display -->
+        <p id="config-message" class="error-text"></p>
+    </main>
+    <hr style="margin: 40px 0;">
+
+    <main class="form-container">
+        <h1>Event Ticket Builder</h1>
+        
+        <!-- Error Counter at the top if submitted with errors -->
+        <div id="error-summary" class="error-text"></div>
+
+        <form id="ticket-form" novalidate>
+            <!-- Field 1: Event Name -->
+            <div class="form-group">
+                <label for="event-name">Event Name:</label>
+                <select id="event-name" required>
+                    <option value="">--Select an Event--</option>
+                    <option value="Concert">Rock Concert</option>
+                    <option value="TechConference">Tech Summit 2026</option>
+                    <option value="ArtExhibition">Art Gallery Opening</option>
+                </select>
+                <small class="error-msg" id="err-event"></small>
+            </div>
+
+            <!-- Field 2: Date -->
+            <div class="form-group">
+                <label for="event-date">Date:</label>
+                <input type="date" id="event-date" required>
+                <small class="error-msg" id="err-date"></small>
+            </div>
+
+            <!-- Field 3: Ticket Type -->
+            <div class="form-group">
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" required>
+                    <option value="">--Select Type--</option>
+                    <option value="VIP">VIP (Seats left: 5)</option>
+                    <option value="Regular">Regular (Seats left: 20)</option>
+                </select>
+                <small class="error-msg" id="err-type"></small>
+            </div>
+
+            <!-- Field 4: Quantity -->
+            <div class="form-group">
+                <label for="ticket-qty">Quantity:</label>
+                <input type="number" id="ticket-qty" min="1" value="1" required>
+                <small class="error-msg" id="err-qty"></small>
+            </div>
+
+            <!-- Field 5: Purchaser Name -->
+            <div class="form-group">
+                <label for="buyer-name">Your Full Name:</label>
+                <input type="text" id="buyer-name" placeholder="John Doe" required>
+                <small class="error-msg" id="err-name"></small>
+            </div>
+
+            <!-- Field 6: Email Address -->
+            <div class="form-group">
+                <label for="buyer-email">Email Address:</label>
+                <input type="email" id="buyer-email" placeholder="john@example.com" required>
+                <small class="error-msg" id="err-email"></small>
+            </div>
+
+            <!-- Optional Promo Code -->
+            <div class="form-group">
+                <label for="promo-code">Promo Code (Optional):</label>
+                <input type="text" id="promo-code" placeholder="Try 'SAVE10'">
+            </div>
+
+            <button type="submit" id="submit-btn">Generate Ticket</button>
+        </form>
+
+        <!-- Live Preview Card -->
+        <div id="ticket-preview" class="preview-card">
+            <h3>Live Ticket Preview</h3>
+            <p><strong>Event:</strong> <span id="prev-event">---</span></p>
+            <p><strong>Date:</strong> <span id="prev-date">---</span></p>
+            <p><strong>Type:</strong> <span id="prev-type">---</span></p>
+            <p><strong>Qty:</strong> <span id="prev-qty">1</span></p>
+            <p><strong>Name:</strong> <span id="prev-name">---</span></p>
+            <p><strong>Total Price:</strong> $<span id="prev-price">0</span></p>
+        </div>
+
+        <!-- Success Confirmation Result Area -->
+        <div id="success-result" class="hidden"></div>
+    </main>
+    <script src="task1.js" defer></script>
+    <script src="task2.js" defer></script>
+    <script src="task3.js" defer></script>

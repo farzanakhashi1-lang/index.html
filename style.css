@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+.game-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: space-around;
+    background: #eef2f7;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+.configurator-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.budget-panel {
+    display: flex;
+    justify-content: space-around;
+    background: #eef2f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.option-card {
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.option-card.selected {
+    border-color: #28a745;
+    background-color: #f4fbf7;
+}
+
+.option-card.disabled {
+    opacity: 0.5;
+}
+
+.error-text {
+    color: #dc3545;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[aria-invalid="true"], .form-group select[aria-invalid="true"] {
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.error-msg {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.preview-card {
+    background: #f8f9fa;
+    border: 1px dashed #6c757d;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
